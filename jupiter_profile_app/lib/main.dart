@@ -47,6 +47,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
         centerTitle: true,
       ),
+      drawer: const Drawer(
+        child: Text('Test'),
+      ),
 
       body: Center(
         child: Column(
