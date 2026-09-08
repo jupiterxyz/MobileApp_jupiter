@@ -47,8 +47,20 @@ class _MyHomePageState extends State<MyHomePage> {
 
         centerTitle: true,
       ),
-      drawer: const Drawer(
-        child: Text('Test'),
+      drawer: Drawer(
+        child: ListView(
+          children: const [
+            Text('Navigation Menu'),
+            ListTile(
+              leading: const Icon(Icons.palette),
+              title: const Text('My Hobbies'),
+            ),  
+            ListTile(
+              leading: const Icon(Icons.photo),
+              title: const Text('Fave Pics'),
+            ), 
+          ],
+        ),
       ),
 
       body: Center(
