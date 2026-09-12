@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),  
             ListTile(
               leading: const Icon(Icons.photo),
-              title: const Text('Fave Pics'),
+              title: const Text('Faveorite Pictures'),
             ), 
           ],
         ),
