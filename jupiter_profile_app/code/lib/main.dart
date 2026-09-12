@@ -186,7 +186,7 @@ class HobbiesScreen extends StatelessWidget {
                   SizedBox(width: 20),
                   CircleAvatar(radius: 20, child: Text('1')),
                   SizedBox(width: 20),
-                  Text('Listen to Music', style: TextStyle(fontSize: 16)),
+                  Text('Listening to Music', style: TextStyle(fontSize: 16)),
                 ],
               ),
             ),
@@ -202,6 +202,49 @@ class HobbiesScreen extends StatelessWidget {
                   CircleAvatar(radius: 20, child: Text('2')),
                   SizedBox(width: 20),
                   Text('Photography', style: TextStyle(fontSize: 16)),
+                ],
+              ),
+            ),
+          ),
+
+          Card(
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: SizedBox(
+              height: 60,
+              child: const Row(
+                children: [
+                  SizedBox(width: 20),
+                  CircleAvatar(radius: 20, child: Text('3')),
+                  SizedBox(width: 20),
+                  Text('Music', style: TextStyle(fontSize: 16)),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: SizedBox(
+              height: 60,
+              child: const Row(
+                children: [
+                  SizedBox(width: 20),
+                  CircleAvatar(radius: 20, child: Text('4')),
+                  SizedBox(width: 20),
+                  Text('Traveling', style: TextStyle(fontSize: 16)),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: SizedBox(
+              height: 60,
+              child: const Row(
+                children: [
+                  SizedBox(width: 20),
+                  CircleAvatar(radius: 20, child: Text('5')),
+                  SizedBox(width: 20),
+                  Text('Fitness Lifestyle', style: TextStyle(fontSize: 16)),
                 ],
               ),
             ),
