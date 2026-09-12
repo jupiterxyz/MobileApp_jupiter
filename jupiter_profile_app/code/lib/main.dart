@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
       title: 'Jupiter Profile',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color.fromARGB(255, 183, 58, 108),
         ),
@@ -41,23 +40,31 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // This controls the color of the app bar.
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-
         // This displays the title passed from MyHomePage.
         title: Text(widget.title),
-
         centerTitle: true,
       ),
+
       drawer: Drawer(
         child: ListView(
-          children: const [
-            Text('Navigation Menu'),
+          children: [
+            const Text('Navigation Menu'),
+
             ListTile(
               leading: const Icon(Icons.palette),
               title: const Text('My Hobbies'),
+              onTap:() {
+                Navigator.push(
+                  context,
+                   MaterialPageRoute(builder: (context) => const HobbiesScreen(), 
+                  ),
+                );
+              }
             ),  
-            ListTile(
+
+            const ListTile(
               leading: const Icon(Icons.photo),
-              title: const Text('Faveorite Pictures'),
+              title: const Text('Favorite Pictures'),
             ), 
           ],
         ),
@@ -65,9 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
       body: Center(
         child: Column(
-
           mainAxisAlignment: MainAxisAlignment.center,
-
           children: [
             const CircleAvatar(
               radius: 50,
@@ -75,28 +80,24 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Icon(Icons.person, size: 55, color: Colors.white),
             ),
             const SizedBox(height: 15),
-
             const Text(
               'Jupiter Lebrun',
               style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-
             const Text(
               'Computing Major & Flutter Beginner',
               style: TextStyle(fontSize: 14, color: Colors.blueGrey),
             ),
-
             const SizedBox(height: 10),
+            
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-               
                 Icon(Icons.location_on, color: Colors.red),
                 SizedBox(width: 10),
                 Text('Atlanta, GA, USA'),
                 SizedBox(width: 15),
-              
                 Icon(Icons.email, color: Colors.blue),
                 SizedBox(width: 8),
                 Text('jl00233@my.westga.edu'),
@@ -116,6 +117,22 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class HobbiesScreen extends StatelessWidget {
+  const HobbiesScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('My Hobbies'),
+      ),
+      body: const Center(
+        child: Text('This is the hobbies screen.'),
       ),
     );
   }
