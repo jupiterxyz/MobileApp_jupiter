@@ -35,7 +35,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         // This controls the color of the app bar.
@@ -45,7 +44,6 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
       ),
 
-      
       drawer: Drawer(
         child: ListView(
           children: [
@@ -53,7 +51,6 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 150,
               color: Theme.of(context).colorScheme.inversePrimary,
               alignment: Alignment.topLeft,
-              //padding: const EdgeInsets.all(40.0),
               child: Text(
                 'Navigation Menu',
                 style: TextStyle(
@@ -66,32 +63,33 @@ class _MyHomePageState extends State<MyHomePage> {
 
             const SizedBox(height: 15),
 
-
             ListTile(
               leading: const Icon(Icons.palette),
               title: const Text('My Hobbies'),
-              onTap:() {
+              onTap: () {
                 Navigator.push(
                   context,
-                   MaterialPageRoute(builder: (context) => const HobbiesScreen(), 
+                  MaterialPageRoute(
+                    builder: (context) => const HobbiesScreen(),
                   ),
                 );
               },
-            ),  
+            ),
 
             const SizedBox(height: 10),
 
             ListTile(
               leading: const Icon(Icons.photo),
               title: const Text('Favorite Pictures'),
-              onTap:() {
+              onTap: () {
                 Navigator.push(
                   context,
-                    MaterialPageRoute(builder: (context) => const FavoritePicturesScreen(), 
+                  MaterialPageRoute(
+                    builder: (context) => const FavoritePicturesScreen(),
                   ),
                 );
               },
-            ),  
+            ),
           ],
         ),
       ),
@@ -116,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontSize: 14, color: Colors.blueGrey),
             ),
             const SizedBox(height: 10),
-            
+
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -136,7 +134,9 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HobbiesScreen()),
+                  MaterialPageRoute(
+                    builder: (context) => const HobbiesScreen(),
+                  ),
                 );
               },
               child: const Text('My Hobbies'),
@@ -148,7 +148,9 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const FavoritePicturesScreen()),
+                  MaterialPageRoute(
+                    builder: (context) => const FavoritePicturesScreen(),
+                  ),
                 );
               },
               child: const Text('My Favorite Pictures'),
@@ -160,7 +162,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-
 class HobbiesScreen extends StatelessWidget {
   const HobbiesScreen({super.key});
 
@@ -171,8 +172,35 @@ class HobbiesScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('My Hobbies'),
       ),
-      body: const Center(
-        child: Text('This is the hobbies screen.'),
+
+      body: ListView(
+        children: [
+          const SizedBox(height: 10),
+
+          ElevatedButton(
+            onPressed: () {},
+            child: const Row(
+              children: [
+                CircleAvatar(child: Text('1')),
+                SizedBox(width: 20),
+                Text('Listen to Music', style: TextStyle(fontSize: 20)),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 10),
+
+          ElevatedButton(
+            onPressed: () {},
+            child: const Row(
+              children: [
+                CircleAvatar(child: Text('2')),
+                SizedBox(width: 20),
+                Text('Photography', style: TextStyle(fontSize: 20)),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -188,9 +216,7 @@ class FavoritePicturesScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('My Favorite Pictures'),
       ),
-      body: const Center(
-        child: Text('This is the favorite pictures screen.'),
-      ),
+      body: const Center(child: Text('This is the favorite pictures screen.')),
     );
   }
 }
