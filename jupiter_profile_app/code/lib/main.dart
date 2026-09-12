@@ -265,33 +265,45 @@ class FavoritePicturesScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('My Favorite Pictures'),
       ),
+
       body: Column(
         children: [
+          const SizedBox(height: 20),
+          
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.network(
                 'https://images.unsplash.com/photo-1527091736853-64ca6a9b64d9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGFpdGl8ZW58MHx8MHx8fDI%3D',
                 width: 200,
                 height: 200,
+                fit: BoxFit.cover,
               ),
+              const SizedBox(width: 10),
               Image.network(
                 'https://images.unsplash.com/photo-1603839957368-33fc4df9943e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFpdGl8ZW58MHx8MHx8fDI%3D',
                 width: 200,
                 height: 200,
+                fit: BoxFit.cover,
               ),
             ],
           ),
+          const SizedBox(height: 10),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.network(
                 'https://images.unsplash.com/photo-1590375049580-4efd9d8909cc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aGFpdGl8ZW58MHx8MHx8fDI%3D',
                 width: 200,
                 height: 200,
+                fit: BoxFit.cover,
               ),
+              const SizedBox(width: 10),
               Image.network(
                 'https://images.unsplash.com/photo-1612229693210-30e16029c415?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhhaXRpfGVufDB8fDB8fHwy',
                 width: 200,
                 height: 200,
+                fit: BoxFit.cover,
               ),
             ],
           ),
