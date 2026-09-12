@@ -45,10 +45,27 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
       ),
 
+      
       drawer: Drawer(
         child: ListView(
           children: [
-            const Text('Navigation Menu'),
+            Container(
+              height: 150,
+              color: Theme.of(context).colorScheme.inversePrimary,
+              alignment: Alignment.topLeft,
+              //padding: const EdgeInsets.all(40.0),
+              child: Text(
+                'Navigation Menu',
+                style: TextStyle(
+                  fontSize: 20,
+                  //fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 15),
+
 
             ListTile(
               leading: const Icon(Icons.palette),
@@ -61,6 +78,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
             ),  
+
+            const SizedBox(height: 10),
 
             ListTile(
               leading: const Icon(Icons.photo),
