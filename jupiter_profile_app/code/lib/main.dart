@@ -59,13 +59,20 @@ class _MyHomePageState extends State<MyHomePage> {
                    MaterialPageRoute(builder: (context) => const HobbiesScreen(), 
                   ),
                 );
-              }
+              },
             ),  
 
-            const ListTile(
+            ListTile(
               leading: const Icon(Icons.photo),
               title: const Text('Favorite Pictures'),
-            ), 
+              onTap:() {
+                Navigator.push(
+                  context,
+                    MaterialPageRoute(builder: (context) => const FavoritePicturesScreen(), 
+                  ),
+                );
+              },
+            ),  
           ],
         ),
       ),
@@ -122,6 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
+
 class HobbiesScreen extends StatelessWidget {
   const HobbiesScreen({super.key});
 
@@ -133,6 +141,22 @@ class HobbiesScreen extends StatelessWidget {
       ),
       body: const Center(
         child: Text('This is the hobbies screen.'),
+      ),
+    );
+  }
+}
+
+class FavoritePicturesScreen extends StatelessWidget {
+  const FavoritePicturesScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('My Favorite Pictures'),
+      ),
+      body: const Center(
+        child: Text('This is the favorite pictures screen.'),
       ),
     );
   }
