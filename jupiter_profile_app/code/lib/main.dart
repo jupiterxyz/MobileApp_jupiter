@@ -177,27 +177,33 @@ class HobbiesScreen extends StatelessWidget {
         children: [
           const SizedBox(height: 10),
 
-          ElevatedButton(
-            onPressed: () {},
-            child: const Row(
-              children: [
-                CircleAvatar(child: Text('1')),
-                SizedBox(width: 20),
-                Text('Listen to Music', style: TextStyle(fontSize: 20)),
-              ],
+          Card(
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: SizedBox(
+              height: 60,
+              child: const Row(
+                children: [
+                  SizedBox(width: 20),
+                  CircleAvatar(radius: 20, child: Text('1')),
+                  SizedBox(width: 20),
+                  Text('Listen to Music', style: TextStyle(fontSize: 16)),
+                ],
+              ),
             ),
           ),
 
-          const SizedBox(height: 10),
-
-          ElevatedButton(
-            onPressed: () {},
-            child: const Row(
-              children: [
-                CircleAvatar(child: Text('2')),
-                SizedBox(width: 20),
-                Text('Photography', style: TextStyle(fontSize: 20)),
-              ],
+          Card(
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: SizedBox(
+              height: 60,
+              child: const Row(
+                children: [
+                  SizedBox(width: 20),
+                  CircleAvatar(radius: 20, child: Text('2')),
+                  SizedBox(width: 20),
+                  Text('Photography', style: TextStyle(fontSize: 16)),
+                ],
+              ),
             ),
           ),
         ],
