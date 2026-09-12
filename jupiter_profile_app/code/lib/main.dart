@@ -114,13 +114,25 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 20),
 
             ElevatedButton(
-              onPressed: () {},
-              child: const Text('Follow me please'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HobbiesScreen()),
+                );
+              },
+              child: const Text('My Hobbies'),
             ),
+
             const SizedBox(height: 20),
+
             OutlinedButton(
-              onPressed: () {},
-              child: const Text('Send me a message'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FavoritePicturesScreen()),
+                );
+              },
+              child: const Text('My Favorite Pictures'),
             ),
           ],
         ),
